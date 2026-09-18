@@ -1,0 +1,16 @@
+{
+  "name": "kimi-context-manager",
+  "version": "0.1.0",
+  "description": "Explicit context-memory subsystem for Kimi Code (MCP port of dsh-context-manager): verbatim pins, durable notes, full-wire-log retrieval",
+  "type": "module",
+  "main": "lib/server.mjs",
+  "bin": { "kimi-context-manager": "lib/server.mjs" },
+  "license": "MIT",
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.0"
+  },
+  "scripts": {
+    "check": "node --check lib/server.mjs && node --check lib/memory.mjs && node --check lib/wire.mjs && node --check lib/tokens.mjs && node test/memory.mjs && node test/wire.mjs"
+  }
+}
